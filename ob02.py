@@ -73,4 +73,5 @@ admin.remove_user(user_list, 1)
 
 # Проверка информации о пользователях
 for user in user_list:
-    print(f"ID: {user.get_user_id()}, Имя: {user.get
+    print(f"ID: {user.get_user_id()}, Имя: {user.get_name()}")
+
