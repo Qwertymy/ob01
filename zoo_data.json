@@ -1,0 +1,33 @@
+{
+    "name": "Городской зоопарк",
+    "animals": [
+        {
+            "type": "Bird",
+            "name": "Орел",
+            "age": 5,
+            "wing_span": 2.0
+        },
+        {
+            "type": "Mammal",
+            "name": "Лев",
+            "age": 8,
+            "fur_color": "Золотой"
+        },
+        {
+            "type": "Reptile",
+            "name": "Змея",
+            "age": 3,
+            "scale_type": "Гладкая"
+        }
+    ],
+    "staff": [
+        {
+            "name": "Андрей",
+            "role": "ZooKeeper"
+        },
+        {
+            "name": "Марина",
+            "role": "Veterinarian"
+        }
+    ]
+}
