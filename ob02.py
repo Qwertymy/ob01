@@ -23,7 +23,7 @@ class User:
         if level in ['user', 'admin']:
             self._access_level = level
         else:
-            raise ValueError("Invalid access level")
+            raise ValueError("Недопустимый уровень доступа")
 
 
 class Admin(User):
@@ -35,9 +35,9 @@ class Admin(User):
     # Метод добавления нового пользователя
     def add_user(self, user_list: list, user: User):
         if not isinstance(user, User):
-            raise TypeError("Only instances of User can be added")
+            raise TypeError("Добавлять можно только экземпляры класса User")
         user_list.append(user)
-        print(f"User {user.get_name()} added successfully.")
+        print(f"Пользователь {user.get_name()} успешно добавлен.")
 
     # Метод удаления пользователя по ID
     def remove_user(self, user_list: list, user_id: int):
@@ -49,9 +49,9 @@ class Admin(User):
 
         if user_to_remove:
             user_list.remove(user_to_remove)
-            print(f"User {user_to_remove.get_name()} removed successfully.")
+            print(f"Пользователь {user_to_remove.get_name()} успешно удален.")
         else:
-            print(f"User with ID {user_id} not found.")
+            print(f"Пользователь с ID {user_id} не найден.")
 
 
 # Пример использования системы
@@ -60,9 +60,9 @@ class Admin(User):
 user_list = []
 
 # Создаем пользователей
-user1 = User(1, "John Doe")
-user2 = User(2, "Jane Smith")
-admin = Admin(99, "Admin")
+user1 = User(1, "Иван Иванов")
+user2 = User(2, "Ольга Смирнова")
+admin = Admin(99, "Администратор")
 
 # Администратор добавляет пользователей
 admin.add_user(user_list, user1)
@@ -73,4 +73,4 @@ admin.remove_user(user_list, 1)
 
 # Проверка информации о пользователях
 for user in user_list:
-    print(f"ID: {user.get_user_id()}, Name: {user.get_name()}, Access Level: {user.get_access_level()}")
+    print(f"ID: {user.get_user_id()}, Имя: {user.get
